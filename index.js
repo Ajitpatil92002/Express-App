@@ -1,11 +1,15 @@
 const express = require("express");
 
+
+const postRoute = require("./routes/post");
+
+
 const app = express();
+
+app.set("view engine", "ejs");
 const PORT = 3000 ;
 
-app.get("/", (req,res)=>{
-    res.json("Hello World!")
-})
+app.use("/" , postRoute)
 
 
 

@@ -1,0 +1,16 @@
+<div class="container">
+    <h2>Recently Addeed</h2>
+    <% postdata.forEach(post => { %>
+        <div class="card text-center mt-4">
+           
+            <div class="card-body">
+              <h5 class="card-title"><%= post.title %> </h5>
+              <p class="card-text"><%= post.body %> </p>
+              <a href="/post/<%= post.id %>" class="btn btn-primary">Read More</a>
+            </div>
+            <div class="card-footer text-muted">
+              2 days ago
+            </div>
+          </div>
+    <% }) %>
+</div>
